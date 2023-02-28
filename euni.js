@@ -45,16 +45,17 @@ sec1.style.justifyContent = "center";
 sec1.style.alignItems = "center";
 
 sec2.style.width = "295px";
-sec2.style.height = "482px";
+sec2.style.height = "382px";
 sec2.style.display = "flex";
 sec2.style.justifyContent = "center";
-sec2.style.alignItems = "center";
+// sec2.style.alignItems = "center";
 
 box.style.width = "199px";
 box.style.borderBottom = "2px solid white"
 box.style.marginBottom = "22px";
 
 title.style.color="white";
+title.style.fontSize = "24px"
 title.style.marginBottom = "10px";
 
 paragraph.style.color = "white";
