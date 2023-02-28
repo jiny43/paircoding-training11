@@ -33,14 +33,28 @@ headerDiv.style.cssText='position: absolute;width: 147px;height: 29px;left:141px
 mainDiv.style.cssText='position: absolute;width: 295px;height: 186px;left: 67px;top: 364px;font-style: normal;font-weight: 400;font-size: 12px;line-height: 15px;text-align: justify;color: #000000;'
 footDiv.style.cssText='position: absolute;width: 82px;height: 82px;left: 174px;top: 673px;background: #5A5A5A;border-radius: 41px;'
 
-//바디 글자색 바꾸기
-function BodySetColor(color){
+//root 글자색 바꾸는 함수
+function rootSetColor(color){
     document.getElementById('root').style.color = color;
     }
 
-// 바디 배경색 바꾸기
+//root 배경색 바꾸는 함수
 function BodySetBackgroundColor(color){
-    document.querySelector('body').style.backgroundColor = color;
+    document.querySelector('root').style.backgroundColor = color;
     }
-
+//핸들러
+function day_night_handler(self) {
+    var target = document.querySelector('body');
+        if (self.value == 'day') {
+            BodySetBackgroundColor('#1E1E1E');
+            BodySetColor('white');
+            self.value = 'night';
+        }
+        else {
+            BodySetBackgroundColor('white');
+            BodySetColor('black');
+            self.value = 'day';
+            }
+        }
+        
 </script>
