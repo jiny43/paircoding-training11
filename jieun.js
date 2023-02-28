@@ -6,14 +6,12 @@ const training = {
 
 }
 
-function maker(tagName, setAttriName, setAttriValue, parent){
+function maker(tagName,textNode){
     const element = document.createElement(tagName);
-    element.setAttribute(setAttriName,setAttriValue);
-    parent.appendChild(element);
-}
-
-function loop(){
-    for(let i =0; i<1; I++){
-        maker('main','id',`div-${i}`,'root');
+    a.innerText=textNode;
+    return element
     }
-}
+
+root.appendChild(maker("div","hello"));
+root.appendChild(maker("div","hi"));
+
