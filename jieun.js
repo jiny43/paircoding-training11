@@ -1,19 +1,23 @@
 const root = document.getElementById('root');
-const training = {
-    title : "lorem ipsum",
-    paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    color : ["#1E1E1E","#FFFFFF"],
-
+    
+const Texts = {
+title : "lorem ipsum",
+paragraph : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+color : ["#1E1E1E","#FFFFFF"],
 }
-
-function maker(tagName, setAttriName, setAttriValue, parent){
+function maker(tagName,textNode){
     const element = document.createElement(tagName);
-    element.setAttribute(setAttriName,setAttriValue);
-    parent.appendChild(element);
-}
-
-function loop(){
-    for(let i =0; i<1; I++){
-        maker('main','id',`div-${i}`,'root');
+    element.innerText=textNode;
+    return element;
     }
-}
+
+let headerDiv =root.appendChild(maker("div",Texts.title));
+let mainDiv=root.appendChild(maker("div",Texts.paragraph));
+let footDiv=root.appendChild(maker("div",""));
+
+root.style.cssText='width:430px;height:932px;'
+headerDiv.style.cssText='position: absolute;width: 147px;height: 29px;left:141px; top:301px; font-style: normal;font-weight: 400;font-size: 24px;line-height: 29px;color: #000000;'
+mainDiv.style.cssText='position: absolute;width: 295px;height: 186px;left: 67px;top: 364px;font-style: normal;font-weight: 400;font-size: 12px;line-height: 15px;text-align: justify;color: #000000;'
+footDiv.style.cssText='position: absolute;width: 82px;height: 82px;left: 174px;top: 673px;background: #5A5A5A;border-radius: 41px;'
+
+// html에 <script src~했는데 안나와요 ㅠ_ㅠ
