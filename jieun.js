@@ -27,26 +27,22 @@ function rootSetColor(color){
     }
 
 //root 배경색 바꾸는 함수
-function BodySetBackgroundColor(color){
+function rootSetBackgroundColor(color){
     document.querySelector('root').style.backgroundColor = color;
     }
+    
 //핸들러
-function day_night_handler(self) {
-    var target = document.querySelector('body');
-        if (self.value == 'day') {
-            BodySetBackgroundColor('#1E1E1E');
-            BodySetColor('white');
-            self.value = 'night';
-        }
-        else {
-            BodySetBackgroundColor('white');
-            BodySetColor('black');
-            self.value = 'day';
-            }
-        }
 
-footDiv.addEventListener("click", function(){
-    BodySetBackgroundColor('#1E1E1E');
-            BodySetColor('white');
+if(footDiv.addEventListener){
+    footDiv.addEventListener('click', function(event){
+        rootSetColor('#FFFFFF');
+        rootSetBackgroundColor('#5A5A5A');
+    }); 
+} 
+    else if(footDiv.attachEvent){
+    footDiv.attachEvent('onclick', function(event){
+        rootSetColor('#5A5A5A');
+        rootSetBackgroundColor('#FFFFFF');
     });
+}
 
