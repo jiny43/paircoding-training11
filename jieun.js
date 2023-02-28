@@ -12,8 +12,8 @@ function maker(tagName,textNode){
     return element;
     }
 //maker 로 div 3개 만듦
-let headerDiv =root.appendChild(maker("div",Texts.title));
-let mainDiv=root.appendChild(maker("div",Texts.paragraph));
+let headerDiv =root.appendChild(maker("div","Texts.title"));
+let mainDiv=root.appendChild(maker("div","Texts.paragraph"));
 let footDiv=root.appendChild(maker("div",""));
 //각 css 작성
 root.style.cssText='width:430px;height:932px;'
@@ -31,7 +31,7 @@ function rootSetBackgroundColor(color){
     document.querySelector('root').style.backgroundColor = color;
     }
 
-//클릭이벤트 핸들러
+//클릭이벤트 
 
 if(footDiv.addEventListener){
     footDiv.addEventListener('click', function(event){
