@@ -30,8 +30,8 @@ function rootSetColor(color){
 function rootSetBackgroundColor(color){
     document.querySelector('root').style.backgroundColor = color;
     }
-    
-//핸들러
+
+//클릭이벤트 핸들러
 
 if(footDiv.addEventListener){
     footDiv.addEventListener('click', function(event){
@@ -45,4 +45,5 @@ if(footDiv.addEventListener){
         rootSetBackgroundColor('#FFFFFF');
     });
 }
+
 
